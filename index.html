@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://code.jquery.com/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	    <title>D3 Tree</title>
+	<script src="js/d3.min.js"></script>
+	<script src="js/main.js"></script>
+	</head>
+	<style>
+	svg {
+		width: 840px;
+		height: 600px;
+		font-family: helvetica, sans-serif;
+	}
+	body {
+		text-align: center;
+	}
+
+	path, line {
+		stroke: #777;
+	}
+
+	</style>
+
+	<body>
+		<div id="chart">
+			<svg>
+			</svg>
+		</div>
+		<div>
+			<button class="btn btn-primary regenerate">Regenerate</button>
+		</div>
+		
+	</body>
+	<script>
+		regenerate()
+		d3.selectAll('.regenerate')
+			.on('click', regenerate);
+	</script>
+</html>
